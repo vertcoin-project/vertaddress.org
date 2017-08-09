@@ -59,15 +59,60 @@ input[type=checkbox] { position: relative; z-index: 20; }
 #paperarea { min-height: 120px; display: none; }
 #paperarea .keyarea { border: 2px solid #009900; border-top: 0; }
 #paperarea .keyarea.art { display: block; height: auto; border: 0; font-family: Ubuntu, Arial; padding: 0; margin: 0; }
-#paperarea .artwallet .papersvg { width: 486px; height: 261px; border: 0; margin: 0; padding: 0; left: 0; }
-#paperarea .artwallet .qrcode_public { top: 52px; left: 17px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
+#paperarea .artwallet .papersvg { width: 694px; height: 294px; border: 0; margin: 0; padding: 0; left: 0; }
+#paperarea .artwallet .qrcode_public { top: 182px; left: 580px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
 		                                padding: 5px 5px 2px 5px; }
-#paperarea .artwallet .qrcode_private { top: 104px; left: 360px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
+#paperarea .artwallet .qrcode_private { top: 18px; left: 260px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
 		                                padding: 5px 5px 2px 5px; }
+
+#paperarea .artwallet .coinIcoin {
+    width: 64px;
+    height: 64px;
+    padding: 10px;
+    position: absolute;
+    top: 170px;
+    left: 20px;
+}
+
+#paperarea .artwallet .coinIcoin img {
+	width: 64px;
+	height: 64px;
+}
+
+#paperarea .artwallet .paperWalletText {
+    bottom: 30px;
+    height: 100px;
+    left: 260px;
+    padding: 0px;
+    position: absolute;
+    width: 185px;
+    font-size: 6pt;
+    color: #383838;
+    line-height: 12pt;
+}
+#paperarea .artwallet .paperWalletText ul {
+  margin: 0px;
+	}
+#paperarea .artwallet .paperWalletText ul li {
+    line-height: 6pt;
+    margin-bottom: 5px;
+	}
+
+#paperarea .artwallet .paperWalletText .backLogo {
+	width: 30px;
+	    height: 30px;
+	    margin: 0px;
+	    float: right;
+}
+
+
 #paperarea .artwallet .btcaddress
 {
-	position: absolute; top: 240px; left: 139px; z-index: 100; font-size: 10px; background-color: transparent;
+	font-family: monospace;
+	position: absolute; top: 275px; left: 535px; width: 100px; z-index: 100; overflow: auto; font-size: 7pt; background-color: transparent;
 	font-weight:bold; color: #000000; margin: 0;
+	word-break: break-all;
+	text-align: center;
 		-webkit-transform-origin:top left; -webkit-transform:rotate(-90deg);
 		-moz-transform-origin:top left;    -moz-transform:rotate(-90deg);
 		-ms-transform-origin:top left;     -ms-transform:rotate(-90deg);
@@ -76,8 +121,11 @@ input[type=checkbox] { position: relative; z-index: 20; }
 }
 #paperarea .artwallet .btcprivwif
 {
-	position: absolute; top: 236px; left: 346px; z-index: 100; font-size: 7px; background-color: transparent;
+	font-family: monospace;
+	position: absolute; top: 118px; left: 368px; width: 100px; z-index: 100; overflow: auto; font-size: 7pt; background-color: transparent;
 	font-weight:bold; color: #000000; margin: 0;
+	word-break: break-all;
+	text-align: center;
 		-webkit-transform-origin:top left; -webkit-transform:rotate(-90deg);
 		-moz-transform-origin:top left;    -moz-transform:rotate(-90deg);
 		-ms-transform-origin:top left;     -ms-transform:rotate(-90deg);
