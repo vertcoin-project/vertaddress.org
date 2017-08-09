@@ -13,7 +13,7 @@
 	lastInputTime: new Date().getTime(),
 	seedPoints: [],
 	isStillSeeding: true,
-	seederDependentWallets: ["singlewallet", "paperwallet", "bulkwallet", "vanitywallet", "splitwallet"],
+	seederDependentWallets: ["singlewallet", "paperwallet", "bulkwallet", "splitwallet"],
 
 	// seed function exists to wait for mouse movement to add more entropy before generating an address
 	seed: function (evt) {
