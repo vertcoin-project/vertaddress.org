@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 		combine: {
 			single: {
 				input: "./src/bitaddress-ui.html",
-				output: "./bitaddress.org.html",
+				output: "./vertaddress.org.html",
 				tokens: [
 					{ token: "//biginteger.js", file: "./src/biginteger.js" },
 					{ token: "//bitcoinjs-lib.js", file: "./src/bitcoinjs-lib.js" },
@@ -52,21 +52,18 @@ module.exports = function (grunt) {
 					{ token: "//fr.js", file: "./src/culture/fr.js" },
 					{ token: "//hu.js", file: "./src/culture/hu.js" },
 					{ token: "//it.js", file: "./src/culture/it.js" },
-					{ token: "//jp.js", file: "./src/culture/jp.js" },
-					{ token: "//pt-br.js", file: "./src/culture/pt-br.js" },
-					{ token: "//ru.js", file: "./src/culture/ru.js" },
-					{ token: "//zh-cn.js", file: "./src/culture/zh-cn.js" }
-				]
+					{ token: "//pt-br.js", file: "./src/culture/pt-br.js" }
+					]
 			}
 		},
-		
+
 		lineending: {               // Task
 			dist: {                   // Target
 				options: {              // Target options
 					eol: 'lf'
 				},
 				files: {                // Files to process
-					'./bitaddress.org.html': ['./bitaddress.org.html']
+					'./vertaddress.org.html': ['./vertaddress.org.html']
 				}
 			}
 		}

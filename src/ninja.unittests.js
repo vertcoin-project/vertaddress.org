@@ -97,7 +97,7 @@
 			testGetBitcoinAddressFromByteArray: function () {
 				var bytes = [4, 120, 152, 47, 64, 250, 12, 11, 122, 85, 113, 117, 131, 175, 201, 154, 78, 223, 211, 1, 162, 114, 157, 197, 155, 11, 142, 185, 225, 134, 146, 188, 181, 33, 240, 84, 250, 217, 130, 175, 76, 193, 147, 58, 253, 31, 27, 86, 62, 167, 121, 166, 170, 108, 206, 54, 163, 11, 148, 125, 214, 83, 230, 62, 68];
 				var address = ninja.publicKey.getBitcoinAddressFromByteArray(bytes);
-				if (address != "1Cnz9ULjzBPYhDw1J8bpczDWCEXnC9HuU1") {
+				if (address != "Vmnp4BWCPzHkkzqA2vFT3tYMt3pkg73jbv") {
 					return false;
 				}
 				return true;
@@ -462,7 +462,7 @@
 			testBugWithLeadingZeroBytePublicKey: function () {
 				var key = "5Je7CkWTzgdo1RpwjYhwnVKxQXt8EPRq17WZFtWcq5umQdsDtTP";
 				var btcKey = new Bitcoin.ECKey(key);
-				if (btcKey.getBitcoinAddress() != "1M6dsMZUjFxjdwsyVk8nJytWcfr9tfUa9E") {
+				if (btcKey.getBitcoinAddress() != "Vv6Tn4iw94rwhin8EXnQjtDNJV98MXCF8n") {
 					return false;
 				}
 				return true;
@@ -470,7 +470,7 @@
 			testBugWithLeadingZeroBytePrivateKey: function () {
 				var key = "0004d30da67214fa65a41a6493576944c7ea86713b14db437446c7a8df8e13da";
 				var btcKey = new Bitcoin.ECKey(key);
-				if (btcKey.getBitcoinAddress() != "1NAjZjF81YGfiJ3rTKc7jf1nmZ26KN7Gkn") {
+				if (btcKey.getBitcoinAddress() != "VwAZUSQaRMAsn4x1C7FkAZLeTNK4jiUZfW") {
 					return false;
 				}
 				return true;
@@ -499,10 +499,10 @@
 			//   1 share in a safety deposit box ("Box")
 			//   1 share at Home
 			//   1 share at Work
-			// Threshold of 2 can be redeemed in these permutations 
-			//   Home + Box 
-			//   Work + Box 
-			//   Home + Work 
+			// Threshold of 2 can be redeemed in these permutations
+			//   Home + Box
+			//   Work + Box
+			//   Home + Work
 			testSplitAndCombinePrivateKey2of3: function () {
 				// lowercase hex key
 				var key = "0004d30da67214fa65a41a6493576944c7ea86713b14db437446c7a8df8e13da"; //5HpJ4bpHFEMWYwCidjtZHwM2rsMh4PRfmZKV8Y21i7msiUkQKUW
@@ -546,7 +546,7 @@
 			//   3 shares with good friend Angie
 			//   3 shares with good friend Fred
 			//   3 shares with Self at home or office
-			// Threshold of 7 can be redeemed in these permutations 
+			// Threshold of 7 can be redeemed in these permutations
 			//   Self + Box (no trust to spend your coins but your friends are backing up your shares)
 			//   Angie + Box (Angie will send btc to executor of your will)
 			//   Fred + Box (if Angie hasn't already then Fred will send btc to executor of your will)
@@ -570,7 +570,7 @@
 			testCombinePrivateKeyFromXofYShares: function () {
 				var key = "5K9nHKqbwc1xXpa6wV5p3AaCnubvxQDBukKaFkq7ThAkxgMTMEh";
 				// these are 4 of 6 shares
-				var shares = ["3XxjMASmrkk6eXMM9kAJA7qiqViNVBfiwA1GQDLvg4PVScL", "3Y2DkcPuNX8VKZwpnDdxw55wJtcnCvv2nALqe8nBLViHvck", 
+				var shares = ["3XxjMASmrkk6eXMM9kAJA7qiqViNVBfiwA1GQDLvg4PVScL", "3Y2DkcPuNX8VKZwpnDdxw55wJtcnCvv2nALqe8nBLViHvck",
 					"3Y6qv7kyGwgRBKVHVbUNtzmLYAZWQtTPztPwR8wc7uf4MXR", "3YD4TowZn6jw5ss8U89vrcPHonFW4vSs9VKq8MupV5kevG4"]
 				secrets.setRNG();
 				secrets.init(7);
@@ -592,7 +592,7 @@
 				var btcKeyUncompressed = new Bitcoin.ECKey(keyUncompressed);
 				var btcKeyCompressed = new Bitcoin.ECKey(keyCompressed);
 				var pool = Bitcoin.KeyPool.getArray();
-				
+
 				if (pool.length != 2
 					|| pool[0].getBitcoinWalletImportFormat() != keyUncompressed
 					|| pool[1].getBitcoinWalletImportFormat() != keyCompressed
@@ -613,7 +613,7 @@
 				var btcKeyUncompressed2 = new Bitcoin.ECKey(keyUncompressed);
 				var btcKeyHex = new Bitcoin.ECKey(keyHex);
 				var pool = Bitcoin.KeyPool.getArray();
-				
+
 				if (pool.length != 2
 					|| pool[0].getBitcoinWalletImportFormat() != keyUncompressed
 					|| pool[1].getBitcoinWalletImportFormat() != keyCompressed
@@ -719,7 +719,7 @@
 				var a = new BigInteger('12345', 16);
 				var b = new BigInteger('1000000000000', 16);
 				if (b.subtract(a).toString(16) != 'fffffffedcbb') return false;
-				
+
 				return true;
 			},
 			testBigIntegerShouldMultiplyNumbers: function () {
@@ -763,7 +763,7 @@
 				var p = new BigInteger('ffffffff00000001000000000000000000000000ffffffffffffffffffffffff', 16);
 				var a = new BigInteger('fffffffe00000003fffffffd0000000200000001fffffffe00000002ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff', 16);
 				if (a.divide(p).toString(16) != 'ffffffff00000002000000000000000000000001000000000000000000000001') return false;
-				
+
 				return true;
 			},
 			testBigIntegerShouldModNumbers: function () {
@@ -780,20 +780,20 @@
 				var p = new BigInteger('ffffffff00000001000000000000000000000000ffffffffffffffffffffffff', 16);
 				var a = new BigInteger('fffffffe00000003fffffffd0000000200000001fffffffe00000002ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff', 16);
 				if (a.mod(p).toString(16) != '0') return false;
-				
+
 				return true;
 			},
 			testBigIntegerShouldShiftLeftNumbers: function () {
 				if (new BigInteger('69527932928').shiftLeft(13).toString(16) != '2060602000000') return false;
 				if (new BigInteger('69527932928').shiftLeft(45).toString(16) != '206060200000000000000') return false;
-				
+
 				return true;
 			},
 			testBigIntegerShouldShiftRightNumbers: function () {
 				if (new BigInteger('69527932928').shiftRight(13).toString(16) != '818180') return false;
 				if (new BigInteger('69527932928').shiftRight(17).toString(16) != '81818') return false;
 				if (new BigInteger('69527932928').shiftRight(256).toString(16) != '0') return false;
-				
+
 				return true;
 			},
 			testBigIntegerShouldModInverseNumbers: function () {
@@ -806,7 +806,7 @@
 				var a = new BigInteger('deadbeef', 16);
 				var b = a.modInverse(p192);
 				if (a.multiply(b).mod(p192).toString(16) != '1') return false;
-				
+
 				return true;
 			},
 			testBigIntegerShouldThrowOnModInverseOfZero: function () {
@@ -826,7 +826,7 @@
 				var p = new BigInteger('fffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2f', 16);
 				var zInv = z.modInverse(p);
 				if (zInv.signum() !== 1) return false; //zInv should be positive
-				
+
 				return true;
 			},
 			testECKeyDoesntHangWithSpecificKey: function () {
@@ -839,7 +839,7 @@
 				return true;
 			},
 
-			// test checksum exceptions 
+			// test checksum exceptions
 			testUncompressedWifShouldFailChecksum: function () {
 				// original key: 5KjQAHniFiy18SU7eenyJ9EPYUkjrbiBPfDqw987QjT5vehVQZV   K->k
 				var key = "5kjQAHniFiy18SU7eenyJ9EPYUkjrbiBPfDqw987QjT5vehVQZV";
@@ -860,12 +860,12 @@
 				return true;
 
 			},
-			// test range of valid private key values for the secp256k1 curve, when specified in hex is 
+			// test range of valid private key values for the secp256k1 curve, when specified in hex is
 			// [0x1, 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364140]
 			testBigIntegerZeroShouldSetError: function () {
 				var key = "0000000000000000000000000000000000000000000000000000000000000000";
 				var btcKey = new Bitcoin.ECKey(key);
-				if (btcKey.error == null) { 
+				if (btcKey.error == null) {
 					return false;
 				}
 				return true;

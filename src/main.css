@@ -48,17 +48,23 @@ input[type=checkbox] { position: relative; z-index: 20; }
 #singlesafety { text-align: left; padding: 5px; border-top: 2px solid #009900; top: -25px; position: relative; }
 
 #main { position: relative; text-align: center; margin: 0px auto; width: 808px; }
-#logo { width: 578px; height: 80px; }
-		
+#logo { width: 500px; height: 96px; }
+
+@media screen and (max-width: 600px) {
+    #logo {
+         width: 250px; height: 48px;
+    }
+}
+
 #paperarea { min-height: 120px; display: none; }
 #paperarea .keyarea { border: 2px solid #009900; border-top: 0; }
 #paperarea .keyarea.art { display: block; height: auto; border: 0; font-family: Ubuntu, Arial; padding: 0; margin: 0; }
 #paperarea .artwallet .papersvg { width: 486px; height: 261px; border: 0; margin: 0; padding: 0; left: 0; }
-#paperarea .artwallet .qrcode_public { top: 52px; left: 17px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF; 
-		                                padding: 5px 5px 2px 5px; } 
-#paperarea .artwallet .qrcode_private { top: 104px; left: 360px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF; 
+#paperarea .artwallet .qrcode_public { top: 52px; left: 17px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
 		                                padding: 5px 5px 2px 5px; }
-#paperarea .artwallet .btcaddress  
+#paperarea .artwallet .qrcode_private { top: 104px; left: 360px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
+		                                padding: 5px 5px 2px 5px; }
+#paperarea .artwallet .btcaddress
 {
 	position: absolute; top: 240px; left: 139px; z-index: 100; font-size: 10px; background-color: transparent;
 	font-weight:bold; color: #000000; margin: 0;
@@ -67,11 +73,11 @@ input[type=checkbox] { position: relative; z-index: 20; }
 		-ms-transform-origin:top left;     -ms-transform:rotate(-90deg);
 		-o-transform-origin:top left;      -o-transform:rotate(-90deg);
 		transform-origin:top left;         transform:rotate(-90deg);
-} 
-#paperarea .artwallet .btcprivwif  
+}
+#paperarea .artwallet .btcprivwif
 {
 	position: absolute; top: 236px; left: 346px; z-index: 100; font-size: 7px; background-color: transparent;
-	font-weight:bold; color: #000000; margin: 0;  
+	font-weight:bold; color: #000000; margin: 0;
 		-webkit-transform-origin:top left; -webkit-transform:rotate(-90deg);
 		-moz-transform-origin:top left;    -moz-transform:rotate(-90deg);
 		-ms-transform-origin:top left;     -ms-transform:rotate(-90deg);
@@ -81,7 +87,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 #paperarea .artwallet .btcencryptedkey
 {
 	position: absolute; top: 174px; left: 332px; z-index: 100; font-size: 8px; background-color: transparent;
-	font-weight:bold; color: #000000; margin: 0;  
+	font-weight:bold; color: #000000; margin: 0;
 		-webkit-transform-origin:top left; -webkit-transform:rotate(-90deg);
 		-moz-transform-origin:top left;    -moz-transform:rotate(-90deg);
 		-ms-transform-origin:top left;     -ms-transform:rotate(-90deg);
@@ -98,10 +104,10 @@ input[type=checkbox] { position: relative; z-index: 20; }
 #detailarea .notes { text-align: left; font-size: 80%; padding: 0 0 20px 0; }
 #detailarea .pubqr .item .label { text-decoration: none; }
 #detailarea .pubqr .item { float: left; margin: 10px 0; position: relative; }
-#detailarea .pubqr .item.right { float: right; position: relative; top: 0; } 
+#detailarea .pubqr .item.right { float: right; position: relative; top: 0; }
 #detailarea .privqr .item .label { text-decoration: none; }
 #detailarea .privqr .item { float: left; margin: 0; position: relative; }
-#detailarea .privqr .item.right { float: right; position: relative; } 
+#detailarea .privqr .item.right { float: right; position: relative; }
 #detailarea .item { margin: 10px 0; position: relative; font-size: 90%; padding: 1px 0; }
 #detailarea .item.clear { clear: both; padding-top: 10px; }
 #detailarea .label { display: block; font-weight: bold; }
@@ -144,36 +150,36 @@ input[type=checkbox] { position: relative; z-index: 20; }
 #busyblock.busy { display: block; }
 .hide { display: none; }
 .show { display: block; }
-		
-@media screen 	
+
+@media screen
 {
 	#tagline { margin: 0 0 15px 0; font-style: italic; }
-	.menu  
+	.menu
 	{
 	    text-align: left; margin: 0; padding: 0; display: block;
 	    background-color: #009900; /* # 009900 # 53c100 */
 	    border-top-left-radius: 5px; border-top-right-radius: 5px;
 	}
-	.menu .tab 
+	.menu .tab
 	{
 	    position: relative; display: inline-block; border: 0px solid red;
-	    margin: 0; list-style: none; z-index: 110; cursor: pointer; 
-	    top: 1px; padding: 10px 20px; width: 162px; text-align: center;
+	    margin: 0; list-style: none; z-index: 110; cursor: pointer;
+	    top: 1px; padding: 10px 20px; width: 225px; text-align: center;
 	}
-	.menu .tab.selected  
+	.menu .tab.selected
 	{
-	    cursor: default; 
-	    background-color: #FFF; margin: 6px 16px; padding: 4px; border-radius: 5px; 
+	    cursor: default;
+	    background-color: #FFF; margin: 6px 16px; padding: 4px; border-radius: 5px;
 	}
-	.menu .tab:hover  
+	.menu .tab:hover
 	{
-	    background-color: #FFF; margin: 6px 16px; padding: 4px; border-radius: 5px; 
+	    background-color: #FFF; margin: 6px 16px; padding: 4px; border-radius: 5px;
 	}
 	.menu .tab.selected:hover { color: #000; }
-	
+
     .pagebreak { height: 50px; }
 	.commands { border-bottom: 2px solid #009900;  padding: 10px 2px; margin-bottom: 0; }
-	.commands .row { padding: 0 0; text-align: left; } 
+	.commands .row { padding: 0 0; text-align: left; }
 	.commands .row.extra { padding-top: 6px; }
 	.commands span { padding: 0 10px; }
 	.commands span.print { float: right; position: relative; z-index: 20; }
@@ -200,9 +206,9 @@ input[type=checkbox] { position: relative; z-index: 20; }
 	#detailcommands .button { position: relative; z-index: 20; }
 	#detailbip38encryptspan { display: none; }
 	.paper .commands { border: 2px solid #009900; }
-	#bulkstartindex, #paperlimit, #paperlimitperpage { width: 35px; } 
+	#bulkstartindex, #paperlimit, #paperlimitperpage { width: 35px; }
 	#bulklimit { width: 45px; }
-			
+
 	.footer { font-size: 90%; clear: both; width: 770px; padding: 10px 0 10px 0; margin: 50px auto auto auto; }
 	.footer div span.item { padding: 10px; }
 	.footer .authorbtc { float: left; width: 470px; }
