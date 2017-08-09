@@ -91,7 +91,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
     line-height: 12pt;
 }
 #paperarea .artwallet .paperWalletText ul {
-  margin: 0px;
+  padding: 0px;
 	}
 #paperarea .artwallet .paperWalletText ul li {
     line-height: 6pt;
