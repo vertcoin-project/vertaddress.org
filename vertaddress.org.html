@@ -6776,7 +6776,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 							<span id="bulklabelq1">Why should I use a Bulk Wallet to accept vertcoins on my website?</span>
 							<div id="bulke1" class="more"></div>
 						</div>
-						<div id="bulka1" class="answer">The traditional approach to accepting vertcoins on your website requires that you install the official vertcoin client daemon ("vertcoind"). Many website hosting packages don't support installing the vertcoin daemon. Also, running the bitcoin daemon on your web server means your private keys are hosted on the server and could get stolen if your web server is hacked. When using a Bulk Wallet you can upload only the bitcoin addresses and not the private keys to your web server. Then you don't have to worry about your bitcoin wallet being stolen if your web server is hacked. </div>
+						<div id="bulka1" class="answer">The traditional approach to accepting vertcoins on your website requires that you install the official vertcoin client daemon ("vertcoind"). Many website hosting packages don't support installing the vertcoin daemon. Also, running the vertcoin daemon on your web server means your private keys are hosted on the server and could get stolen if your web server is hacked. When using a Bulk Wallet you can upload only the vertcoin addresses and not the private keys to your web server. Then you don't have to worry about your vertcoin wallet being stolen if your web server is hacked. </div>
 					</div>
 					<div id="bulkfaq2" class="faq">
 						<div id="bulkq2" class="question" onclick="ninja.wallets.bulkwallet.openCloseFaq(2);">
@@ -6785,10 +6785,10 @@ input[type=checkbox] { position: relative; z-index: 20; }
 						</div>
 						<div id="bulka2" class="answer">
 							<ol>
-							<li id="bulklabela2li1">Use the Bulk Wallet tab to pre-generate a large number of bitcoin addresses (10,000+). Copy and paste the generated comma separated values (CSV) list to a secure text file on your computer. Backup the file you just created to a secure location.</li>
-							<li id="bulklabela2li2">Import the bitcoin addresses into a database table on your web server. (Don't put the wallet/private keys on your web server, otherwise you risk hackers stealing your coins. Just the bitcoin addresses as they will be shown to customers.)</li>
+							<li id="bulklabela2li1">Use the Bulk Wallet tab to pre-generate a large number of vertcoin addresses (10,000+). Copy and paste the generated comma separated values (CSV) list to a secure text file on your computer. Backup the file you just created to a secure location.</li>
+							<li id="bulklabela2li2">Import the vertcoin addresses into a database table on your web server. (Don't put the wallet/private keys on your web server, otherwise you risk hackers stealing your coins. Just the vertcoin addresses as they will be shown to customers.)</li>
 							<li id="bulklabela2li3">Provide an option on your website's shopping cart for your customer to pay in Vertcoin. When the customer chooses to pay in Vertcoin you will then display one of the addresses from your database to the customer as his "payment address" and save it with his shopping cart order.</li>
-							<li id="bulklabela2li4">You now need to be notified when the payment arrives. Google "bitcoin payment notification" and subscribe to at least one bitcoin payment notification service. There are various services that will notify you via Web Services, API, SMS, Email, etc. Once you receive this notification, which could be programmatically automated, you can process the customer's order. To manually check if a payment has arrived you can use Block Explorer. Replace THEADDRESSGOESHERE with the bitcoin address you are checking. It could take between 10 minutes to one hour for the transaction to be confirmed.<br />http://www.blockexplorer.com/address/THEADDRESSGOESHERE<br /><br />Unconfirmed transactions can be viewed at: http://blockchain.info/ <br />You should see the transaction there within 30 seconds.</li>
+							<li id="bulklabela2li4">You now need to be notified when the payment arrives. Google "vertcoin payment notification" and subscribe to at least one vertcoin payment notification service. There are various services that will notify you via Web Services, API, SMS, Email, etc. Once you receive this notification, which could be programmatically automated, you can process the customer's order. To manually check if a payment has arrived you can use Block Explorer. Replace THEADDRESSGOESHERE with the vertcoin address you are checking. It could take between 10 minutes to one hour for the transaction to be confirmed.<br />http://www.blockexplorer.com/address/THEADDRESSGOESHERE<br /><br />Unconfirmed transactions can be viewed at: http://blockchain.info/ <br />You should see the transaction there within 30 seconds.</li>
 							<li id="bulklabela2li5">Vertcoins will safely pile up on the block chain. Use the original wallet file you generated in step 1 to spend them.</li>
 							</ol>
 						</div>
@@ -7830,17 +7830,17 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 				"paperlabelencryptedkey": "Encrypted Private Key (Password required)",
 				"bulkgeneratingaddresses": "Generating addresses... ",
 				"brainalertpassphrasetooshort": "The passphrase you entered is too short.\n\n",
-				"brainalertpassphrasewarning": "Warning: Choosing a strong passphrase is important to avoid brute force attempts to guess your passphrase and steal your bitcoins.",
+				"brainalertpassphrasewarning": "Warning: Choosing a strong passphrase is important to avoid brute force attempts to guess your passphrase and steal your vertcoin s.",
 				"brainalertpassphrasedoesnotmatch": "The passphrase does not match the confirm passphrase.",
 				"detailalertnotvalidprivatekey": "The text you entered is not a valid Private Key",
-				"detailconfirmsha256": "The text you entered is not a valid Private Key!\n\nWould you like to use the entered text as a passphrase and create a Private Key using a SHA256 hash of the passphrase?\n\nWarning: Choosing a strong passphrase is important to avoid brute force attempts to guess your passphrase and steal your bitcoins.",
+				"detailconfirmsha256": "The text you entered is not a valid Private Key!\n\nWould you like to use the entered text as a passphrase and create a Private Key using a SHA256 hash of the passphrase?\n\nWarning: Choosing a strong passphrase is important to avoid brute force attempts to guess your passphrase and steal your vertcoin s.",
 				"detailbip38decryptbutton": "Decrypt BIP38", //TODO: please translate
 				"detailbip38encryptbutton": "Encrypt BIP38", //TODO: please translate
 				"bip38alertincorrectpassphrase": "Incorrect passphrase for this encrypted private key.",
 				"bip38alertpassphraserequired": "Passphrase required for BIP38 key",
 				"vanityinvalidinputcouldnotcombinekeys": "Invalid input. Could not combine keys.",
 				"vanityalertinvalidinputpublickeysmatch": "Invalid input. The Public Key of both entries match. You must input two different keys.",
-				"vanityalertinvalidinputcannotmultiple": "Invalid input. Cannot multiply two public keys. Select 'Add' to add two public keys to get a bitcoin address.",
+				"vanityalertinvalidinputcannotmultiple": "Invalid input. Cannot multiply two public keys. Select 'Add' to add two public keys to get a vertcoin address.",
 				"vanityprivatekeyonlyavailable": "Only available when combining two private keys",
 				"vanityalertinvalidinputprivatekeysmatch": "Invalid input. The Private Key of both entries match. You must input two different keys.",
 
@@ -9755,6 +9755,7 @@ ninja.wallets.brainwallet = {
 		}
 	}
 };
+
 	</script>
 	<script type="text/javascript">
 (function (wallets, qrCode, privateKey, translator) {
@@ -10092,7 +10093,7 @@ ninja.wallets.splitwallet = {
 			var output = document.createElement("div");
 			output.setAttribute("id", "splitoutput");
 			var m = {};
-			output.appendChild(this.mkOutputRow(bitcoinAddress, "split_addr", "Bitcoin Address:    "));
+			output.appendChild(this.mkOutputRow(bitcoinAddress, "split_addr", "Vertcoin Address:    "));
 			m["split_addr"] = bitcoinAddress;
 
 			for (var i = 0; i < shares.length; i++) {
